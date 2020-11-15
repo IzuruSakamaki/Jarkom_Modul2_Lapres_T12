@@ -170,22 +170,23 @@ zone "semerut12.pw" {
 ![Gambar 9](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor9.PNG)
 #### 10. DocumentRoot http://penanjakan.semeruyyy.pw pada /var/www/penanjakan.semeruyyy.pw
 ![Gambar 10](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/penanjakan.semerut12.pw.conf.PNG)
-![Gambar 11](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2010.PNG)
+![Gambar 11](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor10%20dir%20root.PNG)
 #### 11. Directory Listing Khusus /public pada http://penanjakan.semeruyyy.pw
-![Gambar 12](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2011.PNG)
+![Gambar 12](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2010.PNG)
+![Gambar 13](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2011.PNG)
 #### 12. File Error
-![Gambar 13](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2012.PNG)
+![Gambar 14](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2012.PNG)
 #### 13. Directory Alias http://penanjakan.semeruyyy.pw/public/javascripts menjadi http://penanjakan.semeruyyy.pw/js
 - Saat -indexes
-![Gambar 14](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20saat%20-indexes.PNG)
+![Gambar 15](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20saat%20-indexes.PNG)
 - Setelah +indexes
-![Gambar 15](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20setelah%20%2Bindexes.PNG)
+![Gambar 16](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20setelah%20%2Bindexes.PNG)
 #### 14. Port 8888 untuk http://naik.gunung.semeruyyy.pw dengan DocumentRoot pada /var/www/naik.gunung.semeruyyy.pw
-![Gambar 16](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2014.PNG)
+![Gambar 17](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2014.PNG)
 #### 15. Autentikasi pada http://naik.gunung.semeruyyy.pw
-![Gambar 17](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2015.PNG)
+![Gambar 18](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2015.PNG)
 #### 16. IP PROBOLINGGO Redirect http://semeruyyy.pw
-![Gambar 18](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
+![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
 #### 17. RegEx
 ## Kendala
 
