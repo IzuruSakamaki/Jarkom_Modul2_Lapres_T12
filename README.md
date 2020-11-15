@@ -155,7 +155,8 @@ zone "semerut12.pw" {
 
 Gambar 2. Pengaturan pada `semerut12.pw` dan keberhasilan ping
 
-#### 4. Reverse DNS (Record PTR) http://semeruyyy.pw di Malang dan Mojokerto
+#### 4. Reverse DNS (Record PTR) http://semeruyyy.pw
+
 #### 5. Membuat DNS Slave di Mojokerto
 #### 6. Delegasi Subdomain http://gunung.semeruyyy.pw di Mojokerto dan mengarah ke IP Probolinggo
 #### 7. Pembuatan Subdomain http://naik.gunung.semeruyyy.pw mengarah ke IP Probolinggo
