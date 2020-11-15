@@ -209,6 +209,7 @@ zone "semerut12.pw" {
 #### 17. RegEx (Regular Expression)
 - Buat file `.htaccess` pada folder `/var/www/penanjakan.semerut12.pw/public/images`. Kemudian masukkan Regular Expression untuk melakukan redirect jika ada kata semeru pada url.
 - Regular Expression yang digunakan yaitu sebagai berikut: 
+
 ![Gambar 24](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor17.PNG)
 ## Kendala
 - Segmentation Fault saat mengulang uml
