@@ -153,10 +153,35 @@ zone "semerut12.pw" {
 
 ![Gambar 2](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%201%2C2%2Cdan%203.PNG)
 #### 4. Reverse DNS (Record PTR) http://semeruyyy.pw
+- Edit file `/etc/bind/named.conf.local` pada **MALANG** menggunakan perintah `nano /etc/bind/named.conf.local`
+- Lalu tambahkan konfigurasi berikut ke dalam file named.conf.local
+```
+zone "77.151.10.in-addr.arpa" {
+    type master;
+    file "/etc/bind/jarkom/77.151.10.in-addr.arpa";
+};
+```
+- Copykan file db.local pada path `/etc/bind` ke dalam folder jarkom yang baru saja dibuat dan ubah namanya menjadi 77.151.10.in-addr.arpa dengan cara `cp /etc/bind/db.local /etc/bind/jarkom/77.151.10.in-addr.arpa`
+- Edit file `77.151.10.in-addr.arpa` menjadi seperti gambar
+- Kemudian restart bind9 dengan perintah `service bind9 restart`
+- Untuk mengecek apakah konfigurasi sudah benar atau belum, lakukan perintah berikut pada client GRESIK `host -t PTR 10.151.77.148`
+
 ![Gambar 3](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%204.PNG)
 #### 5. Membuat DNS Slave di Mojokerto
+- Edit file `/etc/bind/named.conf.local` **MALANG** dan sesuaikan dengan syntax di gambar
+- Lakukan restart bind9 dengan cara `service bind9 restart`
+- Kemudian buka file `/etc/bind/named.conf.local` pada **MOJOKERTO** dan tambahkan syntax seperti di gambar
+- Lakukan restart bind9 pada **MALANG** dan **MOJOKERTO** dengan cara `service bind9 restart`
+- Untuk mencobanya dilakukan perintah `service bind9 stop` pada **MALANG**
+
 ![Gambar 4](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%205.PNG)
 #### 6-7. Delegasi Subdomain http://gunung.semeruyyy.pw di Mojokerto dan mengarah ke IP Probolinggo lalu Pembuatan Subdomain http://naik.gunung.semeruyyy.pw mengarah ke IP Probolinggo
+
+
+
+
+
+
 ![Gambar 5](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%206%2C7.PNG)
 #### 8. DocumentRoot http://semeruyyy.pw pada /var/www/semeruyyy.pw
 - Konfigurasi pada `semerut12.pw.conf`
