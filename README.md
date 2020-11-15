@@ -184,20 +184,40 @@ zone "77.151.10.in-addr.arpa" {
 
 ![Gambar 5](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%206%2C7.PNG)
 #### 8. DocumentRoot http://semeruyyy.pw pada /var/www/semeruyyy.pw
-- Konfigurasi pada `semerut12.pw.conf`
+- Buat file konfigurasi dengan menggunakan perintah `cp 000-default.conf semerut12.pw.conf` pada folder `/etc/apache2/sites-available`
+- Tambahkan isi file konfigurasi seperti pada gambar
+
 ![Gambar 6](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/semerut12.pw.conf.PNG)
-- Hasilnya dapat dilihat pada browser
+
+- Lalu lakukan perintah `a2ensite semerut12.pw.conf` untuk mengaktifkan file konfigurasi dan restart apache2 dengan perintah `service apache2 restart`
+- Tampilannya akan terlihat seperti dibawah ini
+
 ![Gambar 7](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%208.PNG)
 #### 9. Module Rewrite http://semeruyyy.pw/index.php/home menjadi http://semeruyyy.pw/home
-- Konfigurasi pada `htaccess`
+- Buat file `.htaccess` dengan menggunakan perintah `nano .htaccess` pada folder `/var/www/semerut12.pw` dan isi file tersebut seperti yang ada pada gambar
+
 ![Gambar 8](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor9%20.htaccess.PNG)
-- Hasilnya dapat dilihat pada browser
+
+- Hasilnya dapat dilihat terjadi perubahan menjadi `semerut12.pw/home`
+
 ![Gambar 9](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor9.PNG)
 #### 10. DocumentRoot http://penanjakan.semeruyyy.pw pada /var/www/penanjakan.semeruyyy.pw
+- Buat file konfigurasi dengan menggunakan perintah `cp 000-default.conf penanjakan.semerut12.pw.conf` pada folder `/etc/apache2/sites-available`
+- Tambahkan isi file konfigurasi seperti pada gambar
 ![Gambar 10](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/penanjakan.semerut12.pw.conf.PNG)
+
+- Lalu lakukan perintah `a2ensite penanjakan.semerut12.pw.conf` untuk mengaktifkan file konfigurasi dan restart apache2 dengan perintah `service apache2 restart`
+- Tampilannya akan terlihat seperti dibawah ini
+
 ![Gambar 11](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor10%20dir%20root.PNG)
 #### 11. Directory Listing Khusus /public pada http://penanjakan.semeruyyy.pw
+- Untuk membuat Directory Listing yang khusus untuk bagian tertentu maka ada 2 langkah, yaitu menambahkan `Options +Indexes` pada directory yang ingin dilihatkan, dan `Options -Indexes` pada directory yang tidak dapat dilihat.
+- Gambar berikut ketika mengakses `http://penanjakan.semeruyyy.pw/public` dan dapat terlihat list yang ada didalamnya
+
 ![Gambar 12](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2010.PNG)
+
+- Sedangkan gambar dibawah adalah bagian yang mana tidak diperbolehkan directory listing
+
 ![Gambar 13](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2011.PNG)
 #### 12. File Error
 - Buat file `.htaccess` dengan menggunakan perintah `nano .htaccess` pada folder `/var/www/penanjakan.semerut12.pw` dan isi file tersebut dengan `ErrorDocument 404 /errors/404.html` untuk mengaktifkan file `404.html` custom error responses
