@@ -177,37 +177,39 @@ zone "semerut12.pw" {
 #### 12. File Error
 - Buat file `.htaccess` dengan menggunakan perintah `nano .htaccess` pada folder `/var/www/penanjakan.semerut12.pw` dan isi file tersebut dengan `ErrorDocument 404 /errors/404.html` untuk mengaktifkan file `404.html` custom error responses
 ![Gambar 14](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor12%20.htaccess.PNG)
-![Gambar 14](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2012.PNG)
+![Gambar 15](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2012.PNG)
 #### 13. Directory Alias http://penanjakan.semeruyyy.pw/public/javascripts menjadi http://penanjakan.semeruyyy.pw/js
 - Tambahkan `Alias "/js" "/var/www/penanjakan.semerut12.pw/public/javascripts"` pada file `penanjakan.semerut12.pw.conf` (Screenshot file `penanjakan.semerut12.pw.conf` pada nomor 10) dengan menggunakan directory alias kita dapat mengakses `penanjakan.semerut12.pw/public/javascripts` menjadi `penanjakan.semerut12.pw/js` saja
-- Saat -indexes
-![Gambar 15](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20saat%20-indexes.PNG)
-- Setelah +indexes
-![Gambar 16](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20setelah%20%2Bindexes.PNG)
+- Tampilan saat -indexes
+![Gambar 16](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20saat%20-indexes.PNG)
+- Tampilan setelah +indexes
+![Gambar 17](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20setelah%20%2Bindexes.PNG)
 #### 14. Port 8888 untuk http://naik.gunung.semeruyyy.pw dengan DocumentRoot pada /var/www/naik.gunung.semeruyyy.pw
 - Buat file konfigurasi dengan menggunakan perintah `cp 000-default.conf naik.gunung.semerut12.pw.conf` pada folder `/etc/apache2/sites-available`
 - Tambahkan isi file konfigurasi seperti berikut ini
-![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/naik.gunung.semerut12.pw.conf.PNG)
+![Gambar 18](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/naik.gunung.semerut12.pw.conf.PNG)
 - Lalu lakukan perintah `a2ensite naik.gunung.semerut12.pw.conf` untuk mengaktifkan file konfigurasi dan restart apache2 dengan perintah `service apache2 restart`
 - Tampilan
-![Gambar 17](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2014.PNG)
+![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2014.PNG)
 #### 15. Autentikasi pada http://naik.gunung.semeruyyy.pw
 - Gunakan Apache HTPASSWD untuk melakukan autentikasi pada situs `http://naik.gunung.semerut12.pw` pada port `8888`
 - Hal yang harus dilakukan terlebih dahulu adalah menginstall Apache Utilities Package dengan cara `apt-get install apache2 apache2-utils`.
 - Buat file `.htpasswd` dengan perintah `nano .htpasswd`
 - Kemudian buat password file dengan menggunakan command htpasswd -> `htpasswd -c /etc/apache2/.htpasswd semeru`. Lalu masukkan password pada user `semeru` yaitu `kuynaikgunung`.
 
-![Gambar 18](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor15%20.htpasswd.PNG)
+![Gambar 20](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor15%20.htpasswd.PNG)
 - Lalu lakukan konfigurasi pada `/etc/apache2/sites-available/naik.gunung.semerut12.pw.conf`
-![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/naik.gunung.semerut12.pw.conf.PNG)
+![Gambar 21](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/naik.gunung.semerut12.pw.conf.PNG)
 - Autentikasi
-![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2015.PNG)
+![Gambar 22](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2015.PNG)
 #### 16. IP PROBOLINGGO Redirect http://semeruyyy.pw
 - Edit file `000-default.conf` dengan menambahkan `Redirect "/" "http://semerut12.pw"` agar ketika kita mengakses `10.151.77.148` akan diredirect ke `http://semerut12.pw`
 
-![Gambar 20](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
+![Gambar 23](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
 #### 17. RegEx (Regular Expression)
-- File `.htaccess` pada folder `/var/www/penanjakan.semerut12.pw/public/images` 
-![Gambar 21](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor17.PNG)
+- Buat file `.htaccess` pada folder `/var/www/penanjakan.semerut12.pw/public/images`. Kemudian masukkan Regular Expression untuk melakukan redirect jika ada kata semeru pada url.
+- Regular Expression yang digunakan yaitu sebagai berikut: 
+![Gambar 24](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor17.PNG)
 ## Kendala
-
+- Segmentation Fault saat mengulang uml
+- Force close pada uml
