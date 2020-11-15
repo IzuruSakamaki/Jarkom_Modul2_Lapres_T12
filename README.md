@@ -22,26 +22,31 @@ Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur w
 Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai. (14) sedangkan web http://naik.gunung.semeruyyy.pw sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw. Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private (15) Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya. 
 
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. (16) Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw. (17) Karena pengunjung pada  /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
-
-#### A. Display Filter
-1. Sebutkan webserver yang digunakan pada "testing.mekanis.me"!
-2. Simpan gambar "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"!
-3. Cari username dan password ketika login di "ppid.dpr.go.id"!
-4. Temukan paket dari web-web yang menggunakan basic authentication method!
-5. Ikuti perintah di aku.pengen.pw! Username dan password bisa didapatkan dari file .pcapng!
-6. Seseorang menyimpan file zip melalui FTP dengan nama "Answer.zip". Simpan dan Buka file "Open This.pdf" di Answer.zip. Untuk mendapatkan password zipnya, temukan dalam file zipkey.txt (passwordnya adalah isi dari file txt tersebut).
-7. Ada 500 file zip yang disimpan ke FTP Server dengan nama 1.zip, 2.zip, ..., 500.zip. Salah satunya berisi pdf yang berisi puisi. Simpan dan Buka file pdf tersebut. Your Super Mega Ultra Rare Hint = nama pdf-nya "Yes.pdf"
-8. Cari objek apa saja yang didownload (RETR) dari koneksi FTP dengan Microsoft FTP Service!
-9. Cari username dan password ketika login FTP pada localhost!
-10. Cari file .pdf di wireshark lalu download dan buka file tersebut! clue: "25 50 44 46"
-#### B. Capture Filter
-11. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
-12. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
-13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
-14. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
-15. Filter sehingga wireshark hanya mengambil paket yang tujuannya ke monta.if.its.ac.id!
 ## Jawaban
-#### A. Display Filter
+#### 1. Pembuatan Domain http://semeruyyy.pw di Malang
+#### 2. Record CNAME http://www.semeruyyy.pw di Malang
+#### 3. Pembuatan Subdomain http://penanjakan.semeruyyy.pw di Malang dan mengarah ke IP Probolinggo
+#### 4. Reverse DNS (Record PTR) http://semeruyyy.pw di Malang dan Mojokerto
+#### 5. Membuat DNS Slave di Mojokerto
+#### 6. Delegasi Subdomain http://gunung.semeruyyy.pw di Mojokerto dan mengarah ke IP Probolinggo
+#### 7. Pembuatan Subdomain http://naik.gunung.semeruyyy.pw mengarah ke IP Probolinggo
+#### 8. DocumentRoot http://semeruyyy.pw pada /var/www/semeruyyy.pw
+#### 9. Module Rewrite http://semeruyyy.pw/index.php/home menjadi http://semeruyyy.pw/home
+#### 10. DocumentRoot http://penanjakan.semeruyyy.pw pada /var/www/penanjakan.semeruyyy.pw
+#### 11. Directory Listing Khusus /public pada http://penanjakan.semeruyyy.pw
+#### 12. File Error
+#### 13. Directory Alias http://penanjakan.semeruyyy.pw/public/javascripts menjadi http://penanjakan.semeruyyy.pw/js
+#### 14.a. Port 8888 untuk http://naik.gunung.semeruyyy.pw 
+#### 14.b. DocumentRoot pada /var/www/naik.gunung.semeruyyy.pw
+#### 15.a. Autentikasi pada http://naik.gunung.semeruyyy.pw
+#### 16. IP PROBOLINGGO Redirect http://semeruyyy.pw
+#### 17. RegEx
+
+
+
+
+
+
 ##### 1. *Webserver: nginx/1.14.0 (Ubuntu)*
 ```sh
 Display Filter: http.host == “testing.mekanis.me”
