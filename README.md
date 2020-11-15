@@ -135,9 +135,26 @@ export ftp_proxy="http://DPTSI-563672-7bf54:fc9ae@proxy.its.ac.id:8080"
 19. Lakukan instalasi dnsutils pada **GRESIK** dan **SIDOARJO**
 19. Lakukan update pada setiap UML dengan mengetikkan `apt-get update`
 ## Jawaban
-#### 1. Pembuatan Domain http://semeruyyy.pw di Malang
-#### 2. Record CNAME http://www.semeruyyy.pw di Malang
-#### 3. Pembuatan Subdomain http://penanjakan.semeruyyy.pw di Malang dan mengarah ke IP Probolinggo
+#### SOAL 1-3: Pembuatan Domain http://semeruyyy.pw di Malang, Record CNAME http://www.semeruyyy.pw di Malang, Pembuatan Subdomain http://penanjakan.semeruyyy.pw di Malang dan mengarah ke IP Probolinggo
+- Lakukan perintah `nano /etc/bind/named.conf.local` pada **MALANG**
+- Isikan konfigurasi domain dengan sintax berikut.
+```
+zone "semerut12.pw" {
+	type master;
+	file "/etc/bind/jarkom/semerut12.pw";
+};
+```
+- Buat folder jarkom di dalam `/etc/bind` dengan cara `mkdir /etc/bind/jarkom`
+- Copykan file `db.local` pada path `/etc/bind` ke dalam folder jarkom yang baru saja dibuat dan ubah namanya menjadi `semerut12.pw` dengan cara `cp /etc/bind/db.local /etc/bind/jarkom/semerut12.pw`
+- Kemudian buka file `semerut12.pw` dengan cara `nano /etc/bind/jarkom/semerut12.pw` dan edit seperti pada gambar
+- Restart bind9 dengan perintah `service bind9 restart`
+- Pada client **GRESIK** dan **SIDOARJO** arahkan nameservernya dengan mengedit file `resolve.conf` menggunakan perintah `nano /etc/resolv.conf`
+- Uji dengan `ping`
+
+![Gambar 2](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%201%2C2%2Cdan%203.PNG)
+
+Gambar 2. Pengaturan pada `semerut12.pw` dan keberhasilan ping
+
 #### 4. Reverse DNS (Record PTR) http://semeruyyy.pw di Malang dan Mojokerto
 #### 5. Membuat DNS Slave di Mojokerto
 #### 6. Delegasi Subdomain http://gunung.semeruyyy.pw di Mojokerto dan mengarah ke IP Probolinggo
