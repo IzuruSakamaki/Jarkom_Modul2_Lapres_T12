@@ -22,6 +22,15 @@ Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur w
 Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai. (14) sedangkan web http://naik.gunung.semeruyyy.pw sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw. Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private (15) Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya. 
 
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. (16) Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw. (17) Karena pengunjung pada  /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
+
+## File Pendukung
+- File/folder pendukung untuk web http://semeruyyy.pw bisa di download dengan cara:
+`wget 10.151.36.202/semeru.pw.zip`
+- File/folder pendukung untuk web http://penanjakan.semeruyyy.pw bisa di download dengan cara:
+`wget 10.151.36.202/penanjakan.semeru.pw.zip`
+- File/folder pendukung untuk web http://naik.gunung.semeruyyy.pw bisa di download dengan cara:
+`wget 10.151.36.202/naik.gunung.semeru.pw.zip`
+
 ## Persiapan
 Sebelum lanjut ke jawaban dari soal-soal tersebut, kami mempersiapkan beberapa alat yang diperlukan. Diantaranya adalah:
 1. Xming
