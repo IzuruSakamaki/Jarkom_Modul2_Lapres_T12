@@ -176,11 +176,11 @@ zone "77.151.10.in-addr.arpa" {
 
 ![Gambar 4](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%205.PNG)
 #### 6-7. Delegasi Subdomain http://gunung.semeruyyy.pw di Mojokerto dan mengarah ke IP Probolinggo lalu Pembuatan Subdomain http://naik.gunung.semeruyyy.pw mengarah ke IP Probolinggo
-
-
-
-
-
+- Anggap saja bahwa file `semerut12.pw` telah dikonfigurasi sedemikian rupa seperti yang tertera di nomor 1-3
+- Kemudian edit file `/etc/bind/named.conf.options` dengan cara `nano /etc/bind/named.conf.options`
+- Kemudian comment `dnssec-validation auto;` dan tambahkan baris berikut pada `/etc/bind/named.conf.options` yaitu `allow-query{any;};`
+- Kemudian edit file `gunung.semerut12.pw` menjadi seperti pada gambar
+- Restart bind9 dengan cara `service bind9 restart`
 
 ![Gambar 5](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%206%2C7.PNG)
 #### 8. DocumentRoot http://semeruyyy.pw pada /var/www/semeruyyy.pw
