@@ -36,9 +36,9 @@ Setelah alat yang diperlukan telah disiapkan, maka kami mulai menjalankannya. Be
 5. Klik Open pada Putty
 6. Login dengan Username yaitu nama kelompok dan Password ******
 7. Ketika berhasil login maka kami mulai mengonfigurasi **topologi.sh**, berikut konfigurasinya:
-```
-konfigurasinya masukin sini ngga, atau kasihin gambarnya ya gapapa
-```
+
+![Gambar Topologi](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/topologi.PNG)
+
 8. Jalankan `bash topologi.sh` ketika selesai mengonfigurasi
 9. Pada router **SURABAYA** lakukan setting sysctl dengan mengetikkan perintah nano `/etc/sysctl.conf`
 10. Hilangkan tanda pagar (#) pada bagian `net.ipv4.ip_forward=1`
