@@ -135,7 +135,7 @@ export ftp_proxy="http://DPTSI-563672-7bf54:fc9ae@proxy.its.ac.id:8080"
 19. Lakukan instalasi dnsutils pada **GRESIK** dan **SIDOARJO**
 19. Lakukan update pada setiap UML dengan mengetikkan `apt-get update`
 ## Jawaban
-#### SOAL 1-3: Pembuatan Domain http://semeruyyy.pw di Malang, Record CNAME http://www.semeruyyy.pw di Malang, Pembuatan Subdomain http://penanjakan.semeruyyy.pw di Malang dan mengarah ke IP Probolinggo
+#### 1-3: Pembuatan Domain http://semeruyyy.pw di Malang, Record CNAME http://www.semeruyyy.pw di Malang, Pembuatan Subdomain http://penanjakan.semeruyyy.pw di Malang dan mengarah ke IP Probolinggo
 - Lakukan perintah `nano /etc/bind/named.conf.local` pada **MALANG**
 - Isikan konfigurasi domain dengan sintax berikut.
 ```
@@ -152,25 +152,35 @@ zone "semerut12.pw" {
 - Uji dengan `ping`
 
 ![Gambar 2](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%201%2C2%2Cdan%203.PNG)
-
-Gambar 2. Pengaturan pada `semerut12.pw` dan keberhasilan ping
-
 #### 4. Reverse DNS (Record PTR) http://semeruyyy.pw
-
+![Gambar 3](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%204.PNG)
 #### 5. Membuat DNS Slave di Mojokerto
-#### 6. Delegasi Subdomain http://gunung.semeruyyy.pw di Mojokerto dan mengarah ke IP Probolinggo
-#### 7. Pembuatan Subdomain http://naik.gunung.semeruyyy.pw mengarah ke IP Probolinggo
+![Gambar 4](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%205.PNG)
+#### 6-7. Delegasi Subdomain http://gunung.semeruyyy.pw di Mojokerto dan mengarah ke IP Probolinggo lalu Pembuatan Subdomain http://naik.gunung.semeruyyy.pw mengarah ke IP Probolinggo
+![Gambar 5](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%206%2C7.PNG)
 #### 8. DocumentRoot http://semeruyyy.pw pada /var/www/semeruyyy.pw
+![Gambar 6](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%208.PNG)
 #### 9. Module Rewrite http://semeruyyy.pw/index.php/home menjadi http://semeruyyy.pw/home
+![Gambar 7](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor9%20.htaccess.PNG)
+![Gambar 8](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor9.PNG)
 #### 10. DocumentRoot http://penanjakan.semeruyyy.pw pada /var/www/penanjakan.semeruyyy.pw
+![Gambar 9](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2010.PNG)
 #### 11. Directory Listing Khusus /public pada http://penanjakan.semeruyyy.pw
+![Gambar 10](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2011.PNG)
 #### 12. File Error
+![Gambar 11](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2012.PNG)
 #### 13. Directory Alias http://penanjakan.semeruyyy.pw/public/javascripts menjadi http://penanjakan.semeruyyy.pw/js
-#### 14.a. Port 8888 untuk http://naik.gunung.semeruyyy.pw 
-#### 14.b. DocumentRoot pada /var/www/naik.gunung.semeruyyy.pw
-#### 15.a. Autentikasi pada http://naik.gunung.semeruyyy.pw
+Saat -indexes
+![Gambar 12](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20saat%20-indexes.PNG)
+
+Setelah +indexes
+![Gambar 13](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2013%20setelah%20%2Bindexes.PNG)
+#### 14. Port 8888 untuk http://naik.gunung.semeruyyy.pw dengan DocumentRoot pada /var/www/naik.gunung.semeruyyy.pw
+![Gambar 14](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2014.PNG)
+#### 15. Autentikasi pada http://naik.gunung.semeruyyy.pw
+![Gambar 15](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2015.PNG)
 #### 16. IP PROBOLINGGO Redirect http://semeruyyy.pw
+![Gambar 16](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
 #### 17. RegEx
 ## Kendala
-- Praktikum nya malem jadi saya agak mengantuk (Izul)
-- Kelupaan menuliskan jawaban sampai 15 menit sebelum praktikum berakhir (Izul)
+
