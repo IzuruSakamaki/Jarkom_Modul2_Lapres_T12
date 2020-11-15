@@ -22,6 +22,104 @@ Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur w
 Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai. (14) sedangkan web http://naik.gunung.semeruyyy.pw sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw. Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private (15) Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya. 
 
 Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”. (16) Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw. (17) Karena pengunjung pada  /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
+## Persiapan
+Sebelum lanjut ke jawaban dari soal-soal tersebut, kami mempersiapkan beberapa alat yang diperlukan. Diantaranya adalah:
+1. Xming
+2. Putty
+3. OpenVPN Connect
+
+Setelah alat yang diperlukan telah disiapkan, maka kami mulai menjalankannya. Berikut langkah-langkahnya:
+1. Buka OpenVPN Connect dan nyalakan VPN Profile yang telah ditambahkan dengan `dhcp-option DNS 10.151.77.146`
+2. Buka Xming
+3. Buka Putty
+4. Konfigurasi Putty dengan hostname `10.151.36.203` dan centang pada X11 -> Enable X11 Forwarding
+5. Klik Open pada Putty
+6. Login dengan Username yaitu nama kelompok dan Password ******
+7. Ketika berhasil login maka kami mulai mengonfigurasi **topologi.sh**, berikut konfigurasinya:
+```
+konfigurasinya masukin sini ngga, atau kasihin gambarnya ya gapapa
+```
+8. Jalankan `bash topologi.sh` ketika selesai mengonfigurasi
+9. Pada router **SURABAYA** lakukan setting sysctl dengan mengetikkan perintah nano `/etc/sysctl.conf`
+10. Hilangkan tanda pagar (#) pada bagian `net.ipv4.ip_forward=1`
+11. Lalu ketikka `sysctl -p` untuk mengaktifkan perubahan yang ada
+12. Setting IP pada setiap UML dengan mengetikkan `nano /etc/network/interfaces` Lalu setting IPnya sebagai berikut:
+**SURABAYA**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.151.76.74
+netmask 255.255.255.252
+gateway 10.151.76.72
+
+auto eth1
+iface eth1 inet static
+address 10.151.77.145
+netmask 255.255.255.248
+
+auto eth2
+iface eth2 inet static
+address 192.168.0.1
+netmask 255.255.255.0
+```
+**MALANG**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.151.77.146
+netmask 255.255.255.248
+gateway 10.151.77.145
+```
+**MOJOKERTO**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.151.77.147
+netmask 255.255.255.248
+gateway 10.151.77.145
+```
+**PROBOLINGGO**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.151.77.148
+netmask 255.255.255.248
+gateway 10.151.77.145
+```
+**GRESIK**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.0.3
+netmask 255.255.255.0
+gateway 192.168.0.1
+```
+**SIDOARJO**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.168.0.2
+netmask 255.255.255.0
+gateway 192.168.0.1
+```
 ## Jawaban
 #### 1. Pembuatan Domain http://semeruyyy.pw di Malang
 #### 2. Record CNAME http://www.semeruyyy.pw di Malang
