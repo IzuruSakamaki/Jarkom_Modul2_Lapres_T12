@@ -188,5 +188,7 @@ zone "semerut12.pw" {
 #### 16. IP PROBOLINGGO Redirect http://semeruyyy.pw
 ![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
 #### 17. RegEx
+File `.htaccess` pada folder `/var/www/penanjakan.semerut12.pw/public/images`
+![Gambar 20](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor17.PNG)
 ## Kendala
 
