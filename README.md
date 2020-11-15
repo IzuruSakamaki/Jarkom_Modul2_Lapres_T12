@@ -184,11 +184,16 @@ zone "semerut12.pw" {
 #### 14. Port 8888 untuk http://naik.gunung.semeruyyy.pw dengan DocumentRoot pada /var/www/naik.gunung.semeruyyy.pw
 ![Gambar 17](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2014.PNG)
 #### 15. Autentikasi pada http://naik.gunung.semeruyyy.pw
-![Gambar 18](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2015.PNG)
+Gunakan Apache HTPASSWD untuk melakukan autentikasi pada situs `http://naik.gunung.semerut12.pw` pada port `8888`.
+Hal yang harus dilakukan terlebih dahulu adalah menginstall Apache Utilities Package dengan cara `apt-get install apache2 apache2-utils`.
+Buat file `.htpasswd` dengan perintah `nano .htpasswd`
+Kemudian buat password file dengan menggunakan command htpasswd -> `htpasswd -c /etc/apache2/.htpasswd semeru`.
+![Gambar 18](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor15%20.htpasswd.PNG)
+![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2015.PNG)
 #### 16. IP PROBOLINGGO Redirect http://semeruyyy.pw
-![Gambar 19](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
+![Gambar 20](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor%2016.PNG)
 #### 17. RegEx
 File `.htaccess` pada folder `/var/www/penanjakan.semerut12.pw/public/images`
-![Gambar 20](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor17.PNG)
+![Gambar 21](https://raw.githubusercontent.com/IzuruSakamaki/Jarkom_Modul2_Lapres_T12/main/ss-modul2/nomor17.PNG)
 ## Kendala
 
